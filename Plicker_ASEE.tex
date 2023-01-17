@@ -3,22 +3,21 @@
 
 %-=-=-=-=-=-=-=-=~TODO~-=-=-=-=-=-=-=-=
 
+% ?DONE? Update table formatting
+
 %% Clearly State the Objective: What is happening in the class beforehand i.e. why are we doing this?
 
 %% Add more examples of prior work
 %% More detail on peer instruction
 
 %% Describe plickers more 
-%% mention we didn't create plickers (fairly sure this is in there...)
 %% Update to include text of Zoom questions
 
 %% Describe the process in the classroom
 %%% i.e. Question presented, students respond, students write down answer, check results, if < 80% redo, else continue
 %% At what point do students write down the question and answers. Is this within the alotted time to answer and discuss? How may this impact the results?
 
-%% Are students uncomfortable with their photos taken in the plicker
-
-%% Add demo data if possible
+%% Add demographic data if possible
 
 %% Update language around Zoom v. In-person
 %%% Section 5 suggests that the students may have done better remotely. What evidence is there for this? Could that be suggestive that plickers are a hinderance, or is it more suggestive that online technologies are superior, etc?
@@ -55,6 +54,9 @@
 \graphicspath{ {./images/} }
 \usepackage{booktabs}
 \usepackage{url}
+\usepackage{geometry}
+\usepackage{pdflscape}
+\usepackage{multicol}
 
 %-=-=-=-=-=-=-=-=-~Variables~=-=-=-=-=-=-=-=-=-=-=
 \newcommand\sampleSize{136}
@@ -131,9 +133,12 @@ Here we describe the structure of the course where there intervention took place
 
 \subsection{Course Description}
 This study examines an upper-division software design course taught in Java. The course takes place at a small public North American university on a 16 week semester system. Students enrolled in this course have one or two semesters of programming experience. About half of the students in the course are transfers from other institutions, typically local community colleges. The non-transfer students do not have experience with Java. 
-In this report we examine courses taught between Spring 2020 – Spring 2021 and Spring 2022.  The researcher did not teach the course during the Fall 2021 semester so no data were collected \. Enrollment by semester is shown in table ~\ref{table:enrollmentBySemester}.
+In this report we examine courses taught between Spring 2020 – Spring 2021 and Spring 2022 – Fall 2023.  The researcher did not teach the course during the Fall 2021 semester so no data were collected \. Enrollment by semester is shown in table ~\ref{table:enrollmentBySemester}.
+
+Typically this course has a high drop, fail, withdraw rate (DFW).  This course is also one of the first programming classes taken by
 
 \begin{table}[ht]
+\centering
 \caption{Enrollment per semester}
 \begin{tabular}{|c|c|c|}
 \toprule
@@ -145,13 +150,29 @@ Fall 2020   & 43 & 1 \\ \midrule
 Spring 2021 & 70 & 2 \\ \midrule
 Spring 2022 & 57 & 2 \\ \midrule
 \rowcolor{LightGray}
-Totals & 240 & 7 \\ \bottomrule
+Fall 2022 & 29 & 1 \\ \midrule
+Totals & 269 & 8 \\ \bottomrule
 \end{tabular}
 \label{table:enrollmentBySemester}
 \end{table}
 
+\begin{table}[ht]
+\centering
+\caption{With which gender identity do you most identify?}
+\begin{tabular}{|c|c|}
+\toprule
+Another gender identity & 1 \\\midrule
+\rowcolor{LightGray}
+Female & 35 \\\midrule
+Male & 118 \\\midrule
+\rowcolor{LightGray}
+Prefer not to answer & 3\\\midrule
+Did not answer & 27\\ \bottomrule
+\end{tabular}
+\end{table}
+
 \subsection{Plickers}
-``Plickers'' (\url{https:\\www.plickers.com}) is an online service that allows students to respond to a multiple-choice question presented in class. Students raise a printed card and orient it such that their answer choice is at the top of the card. The instructor uses a mobile device with a camera to scan the cards and get a real time report of the student answers. Students see when their responses are recorded however the specific answer is only visible to the instructor. The results of the student choices are stored, and the instructor may review them later. 
+``Plickers'' (\url{https:\\www.plickers.com}) \footnote{The authors have no connection to Plickers or the company that creates the service.} is an online service that allows students to respond to a multiple-choice question presented in class. Students raise a printed card and orient it such that their answer choice is at the top of the card. The instructor uses a mobile device with a camera to scan the cards and get a real time report of the student answers. Students see when their responses are recorded however the specific answer is only visible to the instructor. The results of the student choices are stored, and the instructor may review them later. The application does not store images of the students, only the result of scanning the cards. 
 
 \begin{figure}[ht]
   \centering
@@ -161,20 +182,25 @@ Totals & 240 & 7 \\ \bottomrule
   \label{fig:plicker_instructor_view}
 \end{figure}
 
-Plickers offer a few advantages over traditional clickers for recording student responses. The overall cost is low, the cards may be printed from home on standard printer paper. In the event that a student forgot their plicker, the instructor had a full set of spare cards. The spare cards were only made available during the first three weeks, after which it was the students responsibility to print their own replacement card. 
+Plickers offer a few advantages over traditional clickers for recording student responses. The overall cost is low, the cards may be printed from home on standard printer paper. In the event that a student forgot their plicker, the instructor had a full set of spare cards. The spare cards were only made available during the first three weeks, after which it was the students responsibility to print their own replacement card. Students are also able to use devices such as mobile phones and tablets to have an electronic version of their card.  In some cases students even used their laptop computer to display their cards.
 
+% \begin{multicols}{2}
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=\linewidth]{plicker_card.png}
+  \includegraphics[width=50mm,scale=0.5]{plicker_card.png}
   \caption{Example Plicker Card.}
   % \Description{Example Plicker Card}
   \label{fig:plicker_card}
+\end{figure}
+\begin{figure}[ht]
   \includegraphics[width=\linewidth]{plicker_question.png}
   \caption{Example Plicker Question Before the Correct Answer is Shown.}
   % \Description{Example Plicker Question Before the Correct Answer is Shown.}
   \label{fig:plicker_question}
 \end{figure}
+
+% \end{multicols}
 
 \subsection{Peer Instruction Implementation}
 
@@ -200,10 +226,11 @@ Student perception of the use of Plickers was measured with a questionnaire that
 The questionnaire was comprised of 25 questions adapted, with permission, from the work of Leo Porter ~\cite{porterPeerInstructionStudents2011}. The questionnaire consisted of: 16 Likert scale questions on a five-point scale; one likert-scale question on a four-point scale;  two free response questions; and six demographic questions. 
 
 Table ~\ref{table:questionnairesummary} presents a summary of nine of the questions relating to the use of plickers and peer instruction in the class. All but the last question are coded so that ``Strongly Disagree'' is the most negative and ``Strongly Agree'' is the most positive answer. The final question listed in table ~\ref{table:questionnairesummary} is coded so that ``Strongly Disagree'' is the most positive answer and ``Strongly Agree'' is the most negative answer. 
-
+\begin{landscape}
 \begin{table*}[ht]
 \caption{Sample Questionnaire Results.\\\hspace{\textwidth}(SD=Strongly Disagree, D=Disagree, N=Neither Disagree nor Agree, A=Agree, SA=Strongly Agree, U=Unanswered)}
-\begin{tabular}{p{0.45\linewidth} |c|c|c|c|c|c} % {l}eft {c}enter {r}ight
+% \begin{tabular}{p{0.45\linewidth} |c|c|c|c|c|c} % {l}eft {c}enter {r}ight
+\begin{tabular}{p{0.25\linewidth} |c|c|c|c|c|c} % {l}eft {c}enter {r}ight
 \toprule
 Question Text & SD & D & N & A & SA & U\\\midrule
 \rowcolor{LightGray}
@@ -224,13 +251,15 @@ Knowing the right answer is the only important part of the Plicker question. & 2
 \end{tabular}
 \label{table:questionnairesummary}
 \end{table*}
+\end{landscape}
+\restoregeometry
 
 
-The questions shown in table ~\ref{table:timeForQuestions} were used to measure the student`s opinion of the amount of time given for reading and answering multiple choice questions and the amount of time alloted to group discussion. Over 85\% of the responding students felt the time given to read the questions was appropriate. Over 80\% of the responding students felt there was an appropriate amount of time for group discussion. 
+The questions shown in table ~\ref{table:timeForQuestions} were used to measure the student`s opinion of the amount of time given for reading and answering multiple choice questions and the amount of time allotted to group discussion. Over 85\% of the responding students felt the time given to read the questions was appropriate. Over 80\% of the responding students felt there was an appropriate amount of time for group discussion. 
 
 \begin{table*}[ht]
 \caption{Time for answering and reading questions.\\\hspace{\textwidth} (ML=Much Too Long, TL=Too long, AR=About Right, TS=Too Short, MS=Much Too Short, U=Unanswered)}
-\begin{tabular}{p{0.45\linewidth} |c|c|c|c|c|c} % {l}eft {c}enter {r}ight
+\begin{tabular}{p{0.25\linewidth} |c|c|c|c|c|c} % {l}eft {c}enter {r}ight
 \toprule
 Question Text & ML & TL & AR & TS & MS & U \\ \midrule
 \rowcolor{LightGray}
