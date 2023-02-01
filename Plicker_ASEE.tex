@@ -57,9 +57,12 @@
 \usepackage{geometry}
 \usepackage{pdflscape}
 \usepackage{multicol}
+\usepackage{calculator}
 
 %-=-=-=-=-=-=-=-=-~Variables~=-=-=-=-=-=-=-=-=-=-=
-\newcommand\sampleSize{136}
+\newcommand\sampleSize{163}
+\newcommand\classSize{269}
+
 
 %% Color Definitions
 \definecolor{LightGray}{gray}{.8}
@@ -135,7 +138,12 @@ Here we describe the structure of the course where there intervention took place
 This study examines an upper-division software design course taught in Java. The course takes place at a small public North American university on a 16 week semester system. Students enrolled in this course have one or two semesters of programming experience. About half of the students in the course are transfers from other institutions, typically local community colleges. The non-transfer students do not have experience with Java. 
 In this report we examine courses taught between Spring 2020 – Spring 2021 and Spring 2022 – Fall 2023.  The researcher did not teach the course during the Fall 2021 semester so no data were collected \. Enrollment by semester is shown in table ~\ref{table:enrollmentBySemester}.
 
-Typically this course has a high drop, fail, withdraw rate (DFW).  This course is also one of the first programming classes taken by
+Typically this course has a high drop, fail, withdraw rate (DFW).  This course is also one of the first programming classes taken by transfer students.
+
+% \DIVIDE{\sampleSize}{\classSize}{\sol}
+% \DIVIDE{\sampleSize}{\classSize}{\sol}
+% \ROUND[2]{\sol}{\sol}
+% $6/7=\sol$\%
 
 \begin{table}[ht]
 \centering
@@ -151,7 +159,7 @@ Spring 2021 & 70 & 2 \\ \midrule
 Spring 2022 & 57 & 2 \\ \midrule
 \rowcolor{LightGray}
 Fall 2022 & 29 & 1 \\ \midrule
-Totals & 269 & 8 \\ \bottomrule
+Totals & \classSize & 8 \\ \bottomrule
 \end{tabular}
 \label{table:enrollmentBySemester}
 \end{table}
@@ -167,7 +175,7 @@ Female & 35 \\\midrule
 Male & 118 \\\midrule
 \rowcolor{LightGray}
 Prefer not to answer & 3\\\midrule
-Did not answer & 27\\ \bottomrule
+Did not answer & 6\\ \bottomrule
 \end{tabular}
 \end{table}
 
@@ -221,7 +229,7 @@ Zoom allows for the creation of ``breakout rooms'' to allow students to discuss 
 
 \section{Results}
 
-Student perception of the use of Plickers was measured with a questionnaire that was administered at the end of each semester. In total there were seven sections across four semesters as shown in table ~\ref{table:enrollmentBySemester}. In total there were \sampleSize responses to the questionnaire for a response rate of 56.67\%.
+Student perception of the use of Plickers was measured with a questionnaire that was administered at the end of each semester. In total there were seven sections across four semesters as shown in table ~\ref{table:enrollmentBySemester}. In total there were \sampleSize responses to the questionnaire for a response rate of  56.67\%.
 
 The questionnaire was comprised of 25 questions adapted, with permission, from the work of Leo Porter ~\cite{porterPeerInstructionStudents2011}. The questionnaire consisted of: 16 Likert scale questions on a five-point scale; one likert-scale question on a four-point scale;  two free response questions; and six demographic questions. 
 
@@ -233,8 +241,8 @@ Table ~\ref{table:questionnairesummary} presents a summary of nine of the questi
 \begin{tabular}{p{0.25\linewidth} |c|c|c|c|c|c} % {l}eft {c}enter {r}ight
 \toprule
 Question Text & SD & D & N & A & SA & U\\\midrule
-\rowcolor{LightGray}
-Discussing Plicker questions with my classmates helped me learn the course material. & 6 (4.41\%)& 2 (1.47\%) & 17 (12.50\%) & 68 (50.00\%)& 40 (29.41\%) & 3 (2.21\%)\\\midrule
+\rowcolor{LightGray}  %q26
+Discussing Plicker questions with my classmates helped me learn the course material. & 6 (4.41\%)& 3 (1.47\%) & 18 (12.50\%) & 75 (50.00\%)& 55 (29.41\%) & 27 (2.21\%)\\\midrule
 Plickers with discussion is valuable for my learning. & 0 (0\%)& 2 (1.47\%) & 12 (8.82\%) & 74 (54.41\%)& 45 (33.09\%) & 3 (2.21\%)\\\midrule
 \rowcolor{LightGray}
 Plickers are an easy-to-use class collaboration tool. & 0 (0\%)& 2 (1.47\%) & 3 (2.21\%) & 64 (47.06\%)& 64 (47.06\%) & 3 (2.21\%)\\\midrule
