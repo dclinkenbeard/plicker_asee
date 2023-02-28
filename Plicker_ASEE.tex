@@ -166,10 +166,9 @@ Demographic data are shown in table ~\ref{tab:demographics}. Note the the questi
 \end{itemize}
 The items are compressed in table \ref{tab:demographics} to allow a better format.
 
-The gender identities of the students in the course are majority male, 72.39\% and 21.47\% female.  The racial and ethnic identies reported show that the majority of the students identify as white (32.52\%) with the second highest percent identifying as "Hispanic, Latino, or Spanish Origin" (28.83\%). This is of note as, according to the Equal Employment Opportunity Commission, only 6.3\% of surveyed workers identified as  \cite{DIVERSITYHIGHTECH}
+The gender identities of the students in the course are majority male, 72.39\% and 21.47\% female.  The racial and ethnic identities reported show that the majority of the students identify as white (32.52\%) with the second highest percent identifying as "Hispanic, Latino, or Spanish Origin" (28.83\%). This is of note as, according to the Equal Employment Opportunity Commission, only 6.3\% of surveyed workers identified as "Hispanic or Latino" \cite{DIVERSITYHIGHTECH}.
 
-Typically this course has a high drop, fail, withdraw rate (DFW).  This course is also one of the first programming classes taken by transfer students.  The goal of the intervention is to increase student engagement and improve the DFW rate though the DFW rate is not examined in this paper.  
-{}
+Typically this course has a high drop, fail, withdraw rate (DFW), generally less than 60\% of the students pass their first time takling this course.  Active learning interventions will typically increase the pass rate of a course. This course is also one of the first programming classes taken by transfer students which may contribute to the high DFQ rate. The main goals of this intervention are to increase student engagement and improve the DFW rate though the DFW rate is not examined in this paper.  
 
 %Demographic Data
 \begin{table}
@@ -237,6 +236,14 @@ Plickers offer a few advantages over traditional clickers for recording student 
   \label{fig:plicker_question}
 \end{figure}
 
+\begin{figure}[ht]
+  \includegraphics[width=\linewidth]{count_discussion.png}
+  \caption{The count of responses when asked about group discussion.}
+  \label{fig:group_discussion}
+\end{figure}
+
+
+
 % \end{multicols}
 
 \subsection{Peer Instruction Implementation}
@@ -261,7 +268,7 @@ Zoom allows for the creation of ``breakout rooms'' to allow students to discuss 
 \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 \begin{table*}[ht]
 % \begin{tabular}{p{0.45\linewidth} |c|c|c|c|c|c} % {l}eft {c}enter {r}ight
-\begin{tabular}{p{0.25\linewidth} |c|c|c|c|c|c} % {l}eft {c}enter {r}ight
+\begin{tabular}{p{0.30\linewidth} |c|c|c|c|c|c} % {l}eft {c}enter {r}ight
 \toprule
 Question Text & SD & D & N & A & SA & U\\\midrule
 \rowcolor{LightGray}  %q26
@@ -290,7 +297,7 @@ Plickers are an easy-to-use class collaboration tool.
 & \specialcell{  6 \\(3.68\%)} \\\midrule 
 %q10
 Plickers helped me pay attention in this course compared to traditional lectures. 
-& 1 (0.61\%) 
+& \specialcell{1 \\(0.61\%) }
 & \specialcell{  1 \\(0.61\%)  }
 & \specialcell{  14 \\(8.59\%)  }
 & \specialcell{  82 \\(50.31\%) }
@@ -298,7 +305,7 @@ Plickers helped me pay attention in this course compared to traditional lectures
 & \specialcell{  6 \\ (3.68\%)} \\\midrule 
 \rowcolor{LightGray} %q8
 Generally, by the time we finished with a question and discussion, I felt pretty clear about it. 
-& 1 (0.61\%)
+& \specialcell{1 \\(0.61\%)}
 & \specialcell{  4 \\(2.45\%)  }
 & \specialcell{  21 \\(12.88\%)  }
 & \specialcell{  104\\ (63.80\%) }
@@ -306,15 +313,15 @@ Generally, by the time we finished with a question and discussion, I felt pretty
 & \specialcell{  6 \\(3.68\%)}\\\midrule 
 %q12
 I recommend that other instructors use this approach (reading quizzes, Plickers, in-class discussion) in their courses. 
-& 0(0\%)
-& 1 (0.61\%) 
-& \specialcell{  15\\ (9.20\%)  }
+& \specialcell{ 0 \\(0\%)}
+& \specialcell{ 1 \\(0.61\%) }
+& \specialcell{ 15\\ (9.20\%)  }
 & \specialcell{  87 \\(53.37\%) }
 & \specialcell{  53 \\(32.52\%)  }
-& \specialcell{  7 \\(4.29\%))}\\\midrule 
+& \specialcell{  7 \\(4.29\%)}\\\midrule 
 \rowcolor{LightGray}%q6
 The immediate feedback from Plickers helped me identify gaps in my knowledge about the course. 
-& 3 (1.84\%) 
+& \specialcell{3 \\(1.84\%) }
 & \specialcell{  3 \\(1.84\%)  }
 & \specialcell{  4 \\(2.45\%)  }
 & \specialcell{  63\\ (38.65\%) }
@@ -322,7 +329,7 @@ The immediate feedback from Plickers helped me identify gaps in my knowledge abo
 & \specialcell{  6 \\(3.68\%)}\\\midrule 
 %q5
 Most of the time my group discusses the Plicker question.  
-& 6 (3.68\%) 
+& \specialcell{6 \\(3.68\%) }
 & \specialcell{  12 \\(7.36\%) }
 & \specialcell{  21\\ (12.88\%) }
 & \specialcell{  63 \\(38.65\%) }
@@ -330,7 +337,7 @@ Most of the time my group discusses the Plicker question.
 & \specialcell{  8 \\(4.91\%)}\\\midrule 
 \rowcolor{LightGray} %q7
 Knowing the right answer is the only important part of the Plicker question. 
-& 26 (15.95\%) 
+& \specialcell{26 \\(15.95\%) }
 & \specialcell{  85 \\(52.15\%) }
 & \specialcell{  23\\ (14.11\%) }
 & \specialcell{15 \\(9.20\%)}
@@ -372,7 +379,13 @@ In general, the amount of time to read and understand the questions before the f
 & \specialcell{ 2 \\ (1.23\%) }
 & \specialcell{ 5 \\ (3.07\%) }
 \\ \midrule %q16
-The amount of time generally allowed for peer discussion was & 1 (0.61\%) & 19 (11.66\%) & 129 (79.14\%) & 7 (4.29\%) & 0 (0\%) & 5 (3.07\%) \\ \bottomrule
+The amount of time generally allowed for peer discussion was 
+& \specialcell{1 \\(0.61\%) }
+& \specialcell{19 \\(11.66\%) } 
+& \specialcell{129 \\(79.14\%) } 
+& \specialcell{7 \\(4.29\%) }
+& \specialcell{0 \\(0\%) }
+& \specialcell{5 \\(3.07\%) }\\ \bottomrule
 \end{tabular}
 \caption{Time for reading and answering questions\\\hspace{\textwidth} (ML=Much Too Long, TL=Too long, AR=About Right, TS=Too Short, MS=Much Too Short, U=Unanswered)}
 \end{table*}
@@ -382,14 +395,20 @@ The amount of time generally allowed for peer discussion was & 1 (0.61\%) & 19 (
 \begin{tabular}{p{0.55\linewidth}|c} % {l}eft {c}enter {r}ight
 \toprule
  \rowcolor{LightGray}  %q15
- I always discuss with the group around me, it helps me learn & 80 (49.08\%)\\\midrule 
- I always discuss with the group around me, I don't really learn, but I stay awake & 15 (9.20\%)\\\midrule 
+ I always discuss with the group around me, it helps me learn 
+ & 80 (49.08\%)\\\midrule 
+ I always discuss with the group around me, I don't really learn, but I stay awake 
+ & 15 (9.20\%)\\\midrule 
  \rowcolor{LightGray}
- I sometimes discuss, it depends & 53 (32.52\%)\\\midrule 
- I rarely discuss, I don't think I get a lot out of it & 5 (3.07\%)\\\midrule 
+ I sometimes discuss, it depends 
+ & 53 (32.52\%)\\\midrule 
+ I rarely discuss, I don't think I get a lot out of it 
+ & 5 (3.07\%)\\\midrule 
  \rowcolor{LightGray}
- I rarely discuss, I'm too shy & 3 (1.84\%)\\\midrule 
- Unanswered & 5 (3.07\%)\\\bottomrule 
+ I rarely discuss, I'm too shy 
+ & 3 (1.84\%)\\\midrule 
+ Unanswered 
+ & 5 (3.07\%)\\\bottomrule 
 \end{tabular}
 \caption{Which of the following best describes your discussion practices in the class this term?}
 \end{table}
@@ -435,6 +454,9 @@ Table ~\ref{table:questionDifficulty} shows the summary information about studen
 \end{tabular}
 \caption{From the perspective of helping me learn, the content of Plicker questions was}
 \end{table}
+
+
+
 
 \section{Critical Reflection}
 
