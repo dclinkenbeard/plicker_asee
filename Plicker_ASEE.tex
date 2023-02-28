@@ -54,6 +54,8 @@
 \usepackage{multicol}
 \usepackage{calculator}
 
+\usepackage[T1]{fontenc}
+
 %-=-=-=-=-=-=-=-=-~Variables~=-=-=-=-=-=-=-=-=-=-=
 \newcommand\sampleSize{163}
 \newcommand\classSize{269}
@@ -104,11 +106,11 @@ The data collected indicate that students found peer instruction to be helpful i
 After the initial effort in creating the question banks used for polls, this process takes very little extra work and provides valuable insight to the instructor and students.  Calling on students to explain answers allows further insight into student understanding.  The  additional instruction helps students to engage with their peers and to better understand the material.  Future work will focus on comparing the pre and post poll responses and in improving group discussion and interaction.
  
 \section{Introduction}
-Peer instruction has long been an effective strategy to improve student performance in STEM classes ~\cite{porterMultiinstitutionalStudyPeer2016} ~\cite{porterHalvingFailRates2013} ~\cite{simonExperienceReportPeer2010a}. One limiting factor to the implementation of peer instruction is the cost associated with purchasing clickers.  This can be especially prohibitive for smaller institutions.  
-This report examines the use of peer instruction with the free online tool Plickers \url{https://www.plickers.com/} and Zoom online polls during remote instruction.  
-This implementation of peer instruction is directly modeled from the work of Leo Porter ~\cite{porterMultiinstitutionalStudyPeer2016}.  The typical model presents students with a multiple-choice question (MCQ). If the percentage of correct answers fall below a threshold students then discuss the question in groups. Once a predetermined amount of time has passed students once more answer the question.
+Peer instruction (PI) has long been an effective strategy to improve student performance in STEM classes ~\cite{porterMultiinstitutionalStudyPeer2016}~\cite{porterHalvingFailRates2013}~\cite{simonExperienceReportPeer2010a}. One limiting factor to the implementation of PI is the cost associated with purchasing clickers.  The cost of traditional clickers can be especially prohibitive for smaller institutions where they may only be used in one or two courses.  
+This report explores the use of peer instruction with the free online tool Plickers \url{https://www.plickers.com/} and Zoom online polls during remote instruction.  
+This implementation of PI is directly modeled from the work of Leo Porter ~\cite{porterMultiinstitutionalStudyPeer2016}.  The typical model presents students with a multiple-choice question (MCQ). If the percentage of correct answers fall below a threshold students then discuss the question in groups. Once a predetermined amount of time has passed students once more answer the question.  A major advantage to introducing Plickers in the class is that it breaks up the monotony of the course and allows students to interact with one another.  
 
-In this report we examine the existing literature on peer instruction and the peer instruction model that inspired this work.  We also report on updating and using peer instruction during remote instruction.  We also discuss possible improvements to the intervention, such as ways to increase student interaction and better question design. The goal of this intervention was to increase student engagement in the material and to build a library of questions to represent the key concepts in the course. 
+In this report we examine the existing literature on peer instruction and the peer instruction model that inspired this work.  We also report on updating and using PI during remote instruction.  We also discuss possible improvements to the intervention, such as ways to increase student interaction and better question design. The goal of this intervention was to increase student engagement in the material and to build a library of questions to represent the key concepts in the course. 
 
 In the next section, we examine the literature relating to peer instruction and how it may improve student performance.  We also explore variations on peer instruction implementation and question design. 
 
@@ -127,22 +129,10 @@ Active learning is further supported by Bloom’s Taxonomy, which suggests movin
 
 \section{Background}
 
-Here we describe the structure of the course where there intervention took place. Then we describe the tools that were used as well as the modifications made during remote instruction. Finally, we discuss the specific implementation of peer instruction covered in this report.
-
-\subsection{Course Description}
-This study examines an upper-division software design course taught in Java. The course takes place at a small public North American university on a 16 week semester system. Students enrolled in this course have one or two semesters of programming experience. About half of the students in the course are transfers from other institutions, typically local community colleges. The non-transfer students do not have experience with Java. 
-In this report we examine courses taught between Spring 2020 – Spring 2021 and Spring 2022 – Fall 2023.  The researcher did not teach the course during the Fall 2021 semester so no data were collected \. Enrollment by semester is shown in table ~\ref{table:enrollmentBySemester}.
-
-Typically this course has a high drop, fail, withdraw rate (DFW).  This course is also one of the first programming classes taken by transfer students.  The goal of the intervention is to increase student engagement and improve the DFW rate though the DFW rate is not examined in this paper.  
-
-% \DIVIDE{\sampleSize}{\classSize}{\sol}
-% \DIVIDE{\sampleSize}{\classSize}{\sol}
-% \ROUND[2]{\sol}{\sol}
-% $6/7=\sol$\%
+Here we describe the structure of the course where there intervention took place, including demographics of the students. Then we describe the tools that were used as well as the modifications made during remote instruction. Finally, we discuss the specific implementation of peer instruction covered in this report.
 
 \begin{table}[ht]
 \centering
-\caption{Enrollment per semester}
 \begin{tabular}{|c|c|c|}
 \toprule
 Semester    & n  & sections\\ \midrule
@@ -157,21 +147,65 @@ Fall 2022 & 29 & 1 \\ \midrule
 Totals & \classSize & 8 \\ \bottomrule
 \end{tabular}
 \label{table:enrollmentBySemester}
+\caption{Enrollment per semester}
 \end{table}
 
-\begin{table}[ht]
+\subsection{Course Description}
+This study examines an upper-division software design course taught in Java. The course takes place at a small public North American university on a 16 week semester system. Students enrolled in this course have one or two semesters of programming experience. About half of the students in the course are transfers from other institutions, typically local community colleges. The non-transfer students do not have experience with Java. 
+In this report we examine courses taught between Spring 2020 – Spring 2021 and Spring 2022 – Fall 2023.  The researcher did not teach the course during the Fall 2021 semester so no data were collected \. Enrollment by semester is shown in table~\ref{table:enrollmentBySemester}.
+
+Demographic data are shown in table ~\ref{tab:demographics}. Note the the questions were askes as follows: 
+\begin{itemize}
+    \item Asian (Such as: Asian Indian, Chinese, Filipino, Japanese, Korean, Vietnamese, etc.) 
+    \item Black or African American (Such as: African American, Ethiopian, Haitian, Jamaican, Nigerian, Somalian, etc.)
+    \item Hispanic, Latino, or Spanish Origin (Such as: Colombian, Cuban, Dominican, Mexican or Mexican American, Puerto Rican, Salvadorian, etc.)
+    \item Middle Eastern or North African (Such as: Algerian, Egyptian, Iranian, Lebanese, Moroccan, Syrian, etc.)
+    \item Native Hawaiian or Other Pacific Islander (Such as: Chamorro, Fijian, Marshallese, Native Hawaiian, Samoan, Tongan, etc.)
+    \item  White (Such as: English, French, German, Irish, Italian, Polish, etc.)
+    \item Another race, ethnicity, or origin
+\end{itemize}
+The items are compressed in table \ref{tab:demographics} to allow a better format.
+
+The gender identities of the students in the course are majority male, 72.39\% and 21.47\% female.  The racial and ethnic identies reported show that the majority of the students identify as white (32.52\%) with the second highest percent identifying as "Hispanic, Latino, or Spanish Origin" (28.83\%). This is of note for several 
+
+Typically this course has a high drop, fail, withdraw rate (DFW).  This course is also one of the first programming classes taken by transfer students.  The goal of the intervention is to increase student engagement and improve the DFW rate though the DFW rate is not examined in this paper.  
+
+
+%Demographic Data
+\begin{table}
+\label{tab:demographics}
 \centering
-\caption{With which gender identity do you most identify?}
-\begin{tabular}{|c|c|}
-\toprule
-Another gender identity & 1 \\\midrule
+\begin{tabular}{r|c|c}
+& Count & \% \\
+\hline
+\hline
+\textbf{Gender}&&\\
 \rowcolor{LightGray}
-Female & 35 \\\midrule
-Male & 118 \\\midrule
+Female & 35 &  21.47\%\\
+Male & 118 & 72.39\%\\
 \rowcolor{LightGray}
-Prefer not to answer & 3\\\midrule
-Did not answer & 6\\ \bottomrule
+Another Gender Identity & 1 &  < 0.01\%\\
+Prefer not to answer & 3 & 0.02\%\\
+\rowcolor{LightGray}
+Did not answer & 6 & 0.04\% \\
+\hline
+\hline
+\textbf{Race and Ethnicity}&&\\
+%%&\multicolumn{2}{c}{Race and Ethincity}\\
+\rowcolor{LightGray}
+Asian  & 34 & 20.86\%\\
+Black or African American & 10 & 6.13\%\\
+\rowcolor{LightGray}
+Hispanic, Latino, or Spanish Origin  & 47 & 28.83\%\\
+Middle Eastern or North African  & 4 & 2.45\%\\
+\rowcolor{LightGray}
+Native Hawaiian or Other Pacific Islander & 0 & 0.0\%\\
+White & 53 & 32.52\%\\
+\rowcolor{LightGray}
+Another race, ethnicity, or origin & 8 & 4.91\%\\
+\hline
 \end{tabular}
+\caption{Participant Demographics}
 \end{table}
 
 \subsection{Plickers}
@@ -222,45 +256,99 @@ An addition to the peer instruction model being followed here is the requirement
 During the later half of the Spring 2020 semester and the entire Fall 2020 semester, instruction was fully remote due to the COVID-19 pandemic. The meeting software ``Zoom''  was used during this time. Zoom offers a polling feature that allowed students to answer multiple choice questions in the same way Plickers were used in person. In order to use Zoom polls questions were shown on a slide deck rather than through the Plicker website. Since the polling feature was somewhat limited, and given time constraints, the same multiple choice poll was used for all of the questions. 
 Zoom allows for the creation of ``breakout rooms'' to allow students to discuss questions in small groups. Students were randomly sorted into groups that would persist for 2–3 weeks before being randomized again. While students were in breakout rooms, the instructor would visit to clear up any issues and ensure students were discussing the question. These tools allowed for the continued use of peer instruction during remote instruction and in some ways were more successful than in-person instruction.
 
-\section{Results}
-
-Student perception of the use of Plickers was measured with a questionnaire that was administered at the end of each semester. In total there were seven sections across four semesters as shown in table ~\ref{table:enrollmentBySemester}. In total there were \sampleSize{}  responses to the questionnaire for a response rate of 60.59\%.
-
-
-\begin{landscape}
+% \begin{landscape}
+\newcommand{\specialcell}[2][c]{%
+\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 \begin{table*}[ht]
-\caption{Sample Questionnaire Results.\\\hspace{\textwidth}(SD=Strongly Disagree, D=Disagree, N=Neither Disagree nor Agree, A=Agree, SA=Strongly Agree, U=Unanswered)}
 % \begin{tabular}{p{0.45\linewidth} |c|c|c|c|c|c} % {l}eft {c}enter {r}ight
 \begin{tabular}{p{0.25\linewidth} |c|c|c|c|c|c} % {l}eft {c}enter {r}ight
 \toprule
 Question Text & SD & D & N & A & SA & U\\\midrule
 \rowcolor{LightGray}  %q26
-Discussing Plicker questions with my classmates helped me learn the course material. & 6 (3.68\%)& 3 (1.84\%) & 18 (11.04\%) & 75 (46.01\%)& 55 (33.74\%) & 6 (3.68\%)\\\midrule
-%q11
-Plickers with discussion is valuable for my learning. & 0 (0\%)& 2 (1.23\%) & 13 (7.98\%) & 85 (52.15\%)& 57 (34.97\%) & 3 (3.68\%)\\\midrule
+Discussing Plicker questions with my classmates helped me learn the course material. 
+& \specialcell{ 6 \\ (3.68\%)}
+& \specialcell{ 3 \\ (1.84\%) }
+& \specialcell{ 18 \\ (11.04\%)  }
+& \specialcell{ 75 \\ (46.01\%)}
+& \specialcell{ 55 \\ (33.74\%)  }
+& \specialcell{ 6 \\ (3.68\%)}\\\midrule 
+
+Plickers with discussion is valuable for my learning. 
+& \specialcell{  0 \\ (0\%) }
+& \specialcell{ 2 (1.23\%)  }
+& \specialcell{13 \\ (7.98\%) }
+& \specialcell{  85 \\ (52.15\%) }
+& \specialcell{  57 \\ (34.97\%)  }
+& \specialcell{  3 \\ (3.68\%)} \\\midrule 
 \rowcolor{LightGray} %q9
-Plickers are an easy-to-use class collaboration tool. & 0 (0\%)& 3 (1.84\%) & 3 (1.84\%) & 72 (44.17\%)& 79 (48.47\%) & 6 (3.68\%)\\\midrule
+Plickers are an easy-to-use class collaboration tool. 
+& \specialcell{0 \\(0\%)}
+& \specialcell{3 \\(1.84\%) }
+& \specialcell{  3 \\(1.84\%)  }
+& \specialcell{  72 \\ (44.17\%) }
+& \specialcell{  79 \\(48.47\%)  }
+& \specialcell{  6 \\(3.68\%)} \\\midrule 
 %q10
-Plickers helped me pay attention in this course compared to traditional lectures. & 1 (0.61\%) & 1 (0.61\%) & 14 (8.59\%) & 82 (50.31\%)& 59 (36.20\%) & 6 (3.68\%)\\\midrule
+Plickers helped me pay attention in this course compared to traditional lectures. 
+& 1 (0.61\%) 
+& \specialcell{  1 \\(0.61\%)  }
+& \specialcell{  14 \\(8.59\%)  }
+& \specialcell{  82 \\(50.31\%) }
+& \specialcell{  59 \\ (36.20\%)  }
+& \specialcell{  6 \\ (3.68\%)} \\\midrule 
 \rowcolor{LightGray} %q8
-Generally, by the time we finished with a question and discussion, I felt pretty clear about it. & 1 (0.61\%)& 4 (2.45\%) & 21 (12.88\%) & 104 (63.80\%)& 27 (16.56\%) & 6 (3.68\%)\\\midrule
+Generally, by the time we finished with a question and discussion, I felt pretty clear about it. 
+& 1 (0.61\%)
+& \specialcell{  4 \\(2.45\%)  }
+& \specialcell{  21 \\(12.88\%)  }
+& \specialcell{  104\\ (63.80\%) }
+& \specialcell{  27\\ (16.56\%)  }
+& \specialcell{  6 \\(3.68\%)}\\\midrule 
 %q12
-I recommend that other instructors use this approach (reading quizzes, Plickers, in-class discussion) in their courses. & 0(0\%)& 1 (0.61\%) & 15 (9.20\%) & 87 (53.37\%)& 53 (32.52\%) & 7 (4.29\%))\\\midrule
+I recommend that other instructors use this approach (reading quizzes, Plickers, in-class discussion) in their courses. 
+& 0(0\%)
+& 1 (0.61\%) 
+& \specialcell{  15\\ (9.20\%)  }
+& \specialcell{  87 \\(53.37\%) }
+& \specialcell{  53 \\(32.52\%)  }
+& \specialcell{  7 \\(4.29\%))}\\\midrule 
 \rowcolor{LightGray}%q6
-The immediate feedback from Plickers helped me identify gaps in my knowledge about the course. & 3 (1.84\%) & 3 (1.84\%) & 4 (2.45\%) & 63 (38.65\%)& 84 (51.53\%)& 6 (3.68\%)\\\midrule
+The immediate feedback from Plickers helped me identify gaps in my knowledge about the course. 
+& 3 (1.84\%) 
+& \specialcell{  3 \\(1.84\%)  }
+& \specialcell{  4 \\(2.45\%)  }
+& \specialcell{  63\\ (38.65\%) }
+& \specialcell{  84 \\(51.53\%) }
+& \specialcell{  6 \\(3.68\%)}\\\midrule 
 %q5
-Most of the time my group discusses the Plicker question.  & 6 (3.68\%) & 12 (7.36\%)& 21 (12.88\%)& 63 (38.65\%)& 53 (32.52\%)& 8 (4.91\%)\\\midrule
+Most of the time my group discusses the Plicker question.  
+& 6 (3.68\%) 
+& \specialcell{  12 \\(7.36\%) }
+& \specialcell{  21\\ (12.88\%) }
+& \specialcell{  63 \\(38.65\%) }
+& \specialcell{  53 \\(32.52\%) }
+& \specialcell{  8 \\(4.91\%)}\\\midrule 
 \rowcolor{LightGray} %q7
-Knowing the right answer is the only important part of the Plicker question. & 26 (15.95\%) & 85 (52.15\%)& 23 (14.11\%)& 15 (9.20\%)& 7 (4.29\%) & 7 (4.29\%)
+Knowing the right answer is the only important part of the Plicker question. 
+& 26 (15.95\%) 
+& \specialcell{  85 \\(52.15\%) }
+& \specialcell{  23\\ (14.11\%) }
+& \specialcell{15 \\(9.20\%)}
+& \specialcell{  7 \\(4.29\%)  }
+& \specialcell{7 \\(4.29\%)}
 \\\bottomrule
 \end{tabular}
 \label{table:questionnairesummary}
+\caption{Sample Questionnaire Results.\\\hspace{\textwidth}(SD=Strongly Disagree, D=Disagree, N=Neither Disagree nor Agree, A=Agree, \\ SA=Strongly Agree, U=Unanswered)}
 \end{table*}
-\end{landscape}
+% \end{landscape}
 \restoregeometry
 
+\section{Results}
 
-The questionnaire is comprised of 25 questions adapted, with permission, from the work of Leo Porter~\cite{porterPeerInstructionStudents2011}. The questionnaire consists of: 16 Likert scale questions on a five-point scale; one likert-scale question on a four-point scale;  two free response questions; and six demographic questions. 
+Student perception of the use of Plickers was measured with a questionnaire that was administered at the end of each semester. In total there were seven sections across four semesters as shown in table ~\ref{table:enrollmentBySemester}. In total there were \sampleSize{}  responses to the questionnaire for a response rate of 60.59\%.
+
+The questionnaire is comprised of 25 questions adapted, with permission, from the work of Leo Porter~\cite{porterPeerInstructionStudents2011}. The questionnaire consists of: 16 Likert scale questions on a five-point scale; one Likert-scale question on a four-point scale;  two free response questions; and six demographic questions. 
 
 Table~\ref{table:questionnairesummary} presents a summary of nine of the questions relating to the use of Plickers/Zoom Polls and peer instruction in the class. All but the last question are coded so that ``Strongly Disagree'' is the most negative and ``Strongly Agree'' is the most positive answer. The final question listed in table ~\ref{table:questionnairesummary} is coded so that ``Strongly Disagree'' is the most positive answer and ``Strongly Agree'' is the most negative answer. Note also that during online instruction the questionnaire asked about Zoom polls rather than Plickers.
 
@@ -270,22 +358,27 @@ As stated earlier in the paper, students did not always discuss the question in 
 
 
 \begin{table*}[ht]
+\label{table:timeForQuestions}
 %q14
-\caption{Time for reading and answering questions\\\hspace{\textwidth} (ML=Much Too Long, TL=Too long, AR=About Right, TS=Too Short, MS=Much Too Short, U=Unanswered)}
 \begin{tabular}{p{0.25\linewidth} |c|c|c|c|c|c} % {l}eft {c}enter {r}ight
 \toprule
 Question Text & ML & TL & AR & TS & MS & U \\ \midrule
 \rowcolor{LightGray}%q14
-In general, the amount of time to read and understand the questions before the first vote was & 1 (0.61\%) & 7 (4.29\%) & 137 (84.05\%) & 9 (5.52\%) & 2 (1.23\%) & 5 (3.07\%) \\ \midrule %q16
+In general, the amount of time to read and understand the questions before the first vote was 
+& \specialcell{  1 \\ (0.61\%) }
+& \specialcell{ 7 \\ (4.29\%) }
+& \specialcell{ 137 \\ (84.05\%) }
+& \specialcell{ 9 \\ (5.52\%) }
+& \specialcell{ 2 \\ (1.23\%) }
+& \specialcell{ 5 \\ (3.07\%) }
+\\ \midrule %q16
 The amount of time generally allowed for peer discussion was & 1 (0.61\%) & 19 (11.66\%) & 129 (79.14\%) & 7 (4.29\%) & 0 (0\%) & 5 (3.07\%) \\ \bottomrule
 \end{tabular}
-\label{table:timeForQuestions}
+\caption{Time for reading and answering questions\\\hspace{\textwidth} (ML=Much Too Long, TL=Too long, AR=About Right, TS=Too Short, MS=Much Too Short, U=Unanswered)}
 \end{table*}
 
-
-
 \begin{table}[ht]
-\caption{Which of the following best describes your discussion practices in the class this term?}
+\label{table:groupDiscussion}
 \begin{tabular}{p{0.55\linewidth}|c} % {l}eft {c}enter {r}ight
 \toprule
  \rowcolor{LightGray}  %q15
@@ -298,14 +391,17 @@ The amount of time generally allowed for peer discussion was & 1 (0.61\%) & 19 (
  I rarely discuss, I'm too shy & 3 (1.84\%)\\\midrule 
  Unanswered & 5 (3.07\%)\\\bottomrule 
 \end{tabular}
-\label{table:groupDiscussion}
+\caption{Which of the following best describes your discussion practices in the class this term?}
 \end{table}
 
 When asked about their comfort level discussing questions the majority of students, 74.85\%, claimed to be either slightly or extremely comfortable talking with their classmate. This information is show in table ~\ref{table:group_comfort}.
 
+Table ~\ref{table:questionDifficulty} shows the summary information about student perceptions of question difficulty. The single most common answer was ``Neither Too Hard Nor Too easy'' at 85.28\%. 
+
+
 %comfort q28
 \begin{table}[ht]
-\caption{How comfortable were you talking with your classmates?}
+\label{table:group_comfort}
 \begin{tabular}{p{0.55\linewidth}|c} % {l}eft {c}enter {r}ight
 \toprule
  \rowcolor{LightGray} 
@@ -318,13 +414,13 @@ When asked about their comfort level discussing questions the majority of studen
  Extremely comfortable & 65 (39.88\%)\\\midrule 
  Unanswered & 5 (3.07\%)\\\bottomrule 
 \end{tabular}
-\label{table:group_comfort}
+\caption{How comfortable were you talking with your classmates?}
 \end{table}
 
-Table ~\ref{table:questionDifficulty} shows the summary information about student perceptions of question difficulty. The single most common answer was ``Neither Too Hard Nor Too easy'' at 85.28\%. 
+
 
 \begin{table}[ht]
-\caption{From the perspective of helping me learn, the content of Plicker questions was}
+\label{table:questionDifficulty}
 \begin{tabular}{p{0.55\linewidth}|c} % {l}eft {c}enter {r}ight
 % \toprule
  \rowcolor{LightGray} 
@@ -337,7 +433,7 @@ Table ~\ref{table:questionDifficulty} shows the summary information about studen
  Much Too Easy & 2 (1.23\%)\\\midrule 
  Unanswered & 5 (3.07\%)\\\bottomrule 
 \end{tabular}
-\label{table:questionDifficulty}
+\caption{From the perspective of helping me learn, the content of Plicker questions was}
 \end{table}
 
 \section{Critical Reflection}
